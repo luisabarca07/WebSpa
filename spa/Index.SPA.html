@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title> Agencia de Viajes Luis Abarca</title>
+  <script type="text/javascript">
+    function controlcookies() {
+             // si variable no existe se crea (al clicar en Aceptar)
+        localStorage.controlcookie = (localStorage.controlcookie || 0);
+     
+        localStorage.controlcookie++; // incrementamos cuenta de la cookie
+        cookie1.style.display='none'; // Esconde la política de cookies
+    }
+    </script>
+</head>
+
+  <style>
+    .hidden {
+      display: none;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: rgb(200, 219, 218);
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #31eea6e5; /* Fondo celeste */
+      padding: 10px;
+      display: flex;
+      align-items: center;
+    }
+
+    h1 {
+      margin: 0;
+      padding: 0;
+      flex: 1;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-right: 10px;
+    }
+
+    nav ul li a {
+      display: block;
+      padding: 8px 16px;
+      background-color: #b9eb06;
+      color: #081b6e;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .content {
+      background-color: #1bb4cf;
+      padding: 20px;
+    }
+    
+    .footer {
+      background-color: #f2f2f2;
+      color: #fff;
+      padding: 1px;
+      text-align: center;
+      width: 100%;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+    }   
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    #header {
+      background-color: blue;
+      color: white;
+      padding: 20px;
+    }
+    
+    #content {
+      background-image: url("imagen1.jpg");
+      background-size: cover;
+      height: 400px;
+      width: 100%;
+    }
+    
+    #content.alt {
+      background-image: url("imagen2.jpg");
+    }
+    
+    .yellow-header {
+      background-color: yellow;
+    }
+    
+    .form-group textarea {
+      height: 100px;
+    }
+        /* Estilos para la tabla de registros */
+    #tablaRegistros {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    #tablaRegistros th, #tablaRegistros td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    #tablaRegistros th {
+      background-color: #f2f2f2;
+    }
+
+    #tablaRegistros tbody tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    #tablaRegistros tbody tr:hover {
+      background-color: #eaeaea;
+    }
+
+    /* Estilos para los contenedores de imágenes */
+  .image-container {
+    display: inline-block;
+    width: 25%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(10, 0, 0, 0.3);
+  }
+  
+    /* CSS para la animación y localización de los DIV de cookies */
+ 
+  @keyframes desaparecer
+  {
+  0%		{bottom: 0px;}
+  80%		{bottom: 0px;}
+  100%		{bottom: -50px;}
+  }
+  
+  @-webkit-keyframes desaparecer /* Safari and Chrome */
+  {
+  0%		{bottom: 0px;}
+  80%		{bottom: 0px;}
+  100%		{bottom: -50px;}
+  }
+  
+  @keyframes aparecer
+  {
+  0%		{bottom: -38px;}
+  10%		{bottom: 0px;}
+  90%		{bottom: 0px;}
+  100%		{bottom: -38px;}
+  }
+  
+  @-webkit-keyframes aparecer /* Safari and Chrome */
+  {
+  0%		{bottom: -38px;}
+  10%		{bottom: 0px;}
+  90%		{bottom: 0px;}
+  100%		{bottom: -38px;}
+  }
+  #cookiesms1:target {
+      display: none;
+  }
+  .cookiesms{	
+    width:100%;
+    height:43px;
+    margin:0 auto;
+    padding-left:1%;
+          padding-top:5px;
+          font-size:20px;
+    clear:both;
+          font-weight: strong;
+  color: #333;
+  bottom:-50px;
+  position:fixed;
+  left: 0px;
+  background-color: #FFF;
+  opacity:0.7;
+  filter:alpha(opacity=70); /* For IE8 and earlier */
+  transition: bottom 1s;
+  -webkit-transition:bottom 1s; /* Safari */
+  -webkit-box-shadow: 3px -3px 1px rgba(50, 50, 50, 0.56);
+  -moz-box-shadow:    3px -3px 1px rgba(50, 50, 50, 0.56);
+  box-shadow:         3px -3px 1px rgba(50, 50, 50, 0.56);
+  z-index:999999999;
+  }
+  
+  .cookiesms:hover{
+  bottom:0px;
+  }
+  .cookies2{
+  background-color: #FFF;
+  display:inline;
+  opacity:0.95;
+  filter:alpha(opacity=95);
+  position:absolute; 
+  left:1%; 
+  top:-30px;
+  font-size:15px;
+  height:30px;
+  padding-left:25px;
+  padding-right:25px;
+  -webkit-border-top-right-radius: 15px;
+  -webkit-border-top-left-radius: 15px;
+  -moz-border-radius-topright: 15px;
+  -moz-border-radius-topleft: 15px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  -webkit-box-shadow: 3px -3px 1px rgba(50, 50, 50, 0.56);
+  -moz-box-shadow:    3px -3px 1px rgba(50, 50, 50, 0.56);
+  box-shadow:         3px -3px 1px rgba(50, 50, 50, 0.56);
+  }
+  
+  /* Fin del CSS para cookies */
+    /* Estilos para pantallas grandes */
+    @media (min-width: 601px) {
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+    }
+
+    /* Estilos para pantallas menores de 600px */
+    @media (max-width: 600px) {
+      .container {
+        max-width: 100%;
+        padding: 10px;
+      }
+    }
+  </style>
+  
+<body>
+ <header>
+  <h1>Agencia de Viajes</h1>
+    <nav>
+      <ul>
+        <li><a href="#Home">Inicio</a></li>
+        <li><a href="#Contactenos">Contactenos</a></li>
+        <li><a href="#Quienes-Somos">Quienes Somos</a></li>
+        <li><a href="#Registros">Registros</a></li>
+      </ul>
+    </nav>  
+  </header>      
+
+<main>
+  <section id="Home">
+    <h1>Bienvenidos</h1>
+    <p>¡Bienvenido a nuestra agencia de viajes! Somos un equipo apasionado de expertos en el mundo de los viajes, dedicados a hacer realidad tus sueños de aventura y exploración. Nuestra agencia se especializa en crear experiencias únicas y personalizadas para cada cliente, ofreciendo una amplia gama de destinos y servicios para satisfacer todas tus necesidades de viaje.
+
+      En nuestra agencia, entendemos que cada viajero es único, con diferentes intereses, preferencias y presupuestos. Por eso, nos enorgullece brindar un servicio altamente personalizado, trabajando estrechamente contigo para diseñar el itinerario perfecto que se ajuste a tus deseos y expectativas.
+      Contamos con un equipo de expertos conocedores de destinos de todo el mundo, quienes se mantienen actualizados sobre las últimas tendencias y novedades en la industria de viajes. Ya sea que sueñes con relajarte en una playa paradisíaca, explorar la rica historia de una ciudad antigua o aventurarte en paisajes impresionantes, estamos aquí para hacer que tus sueños se hagan realidad.
+
+      Además de la planificación de viajes personalizados, también ofrecemos una amplia gama de servicios complementarios, como la reserva de vuelos, alojamiento, transporte terrestre, actividades emocionantes y seguro de viaje. Nos ocupamos de todos los detalles, permitiéndote disfrutar plenamente de tu experiencia sin preocuparte por los aspectos logísticos.</p>
+    
+    <div class="image-container">
+      <img src="https://cdn.shopify.com/s/files/1/1566/2889/articles/Volcan-Villarrica-0.jpg?v=1616068696"Paisaje 1">
+    </div>
+    
+    <div class="image-container">
+      <img src="https://www.rockandpop.cl/wp-content/uploads/2019/05/isla-de-pascua-chile-1-768x510.jpg" alt="Paisaje 2">
+    </div>
+    
+    <div class="image-container">
+      <img src="https://www.latercera.com/resizer/CGylAnw0BmEdJBtBG0fA-oq2MyM=/900x600/smart/arc-anglerfish-arc2-prod-copesa.s3.amazonaws.com/public/4QVH2U7FUNAFLMZD75RA5EUF6Q.jpg" alt="Paisaje 3">
+    </div>
+    
+    <div class="image-container">
+      <img src="https://www.skorpios.cl/wp-content/uploads/Isla-de-Chilo%C3%A9.jpg" alt="Paisaje 4">
+    </div>
+    <div class="image-container">
+      <img src="https://www.latercera.com/resizer/h_pptMrD8E_hrEm6Pe0LYt8c4N0=/900x600/smart/arc-anglerfish-arc2-prod-copesa.s3.amazonaws.com/public/WG4OOVR2XJDUVHDK5SFVUQLQKY.jpg" alt="Paisaje 5">
+    </div>
+    <div class="image-container">
+      <img src="https://dfmas.df.cl/dfmas/site/artic/20230119/imag/foto_0000001020230119202015/A_UNO_1342391.jpg" alt="Paisaje 6">
+    </div>    
+    <button onclick="document.querySelector('footer').style.color = 'blue'">Cambiar color de texto en el pie de página</button>
+  </section>
+
+  <main>
+      <section id="Contactenos" class="hidden">
+        <div class="content">
+          <h2>Contactenos</h2>
+          <form onsubmit="guardarDatos(event)">
+            <!-- Formulario -->
+  
+            <div class="form-group">
+              <label for="nombre">Nombre:</label>
+              <input type="text" id="nombre" name="nombre" required>
+            </div>
+  
+            <div class="form-group">
+              <label for="apellido">Apellido:</label>
+              <input type="text" id="apellido" name="apellido" required>
+            </div>
+  
+            <div class="form-group">
+              <label for="rut">RUT:</label>
+              <input type="text" id="rut" name="rut" required>
+            </div>
+  
+            <div class="form-group">
+              <label for="telefono">Número telefónico:</label>
+              <input type="tel" id="telefono" name="telefono" required>
+            </div>
+  
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+  
+            <div class="form-group">
+              <label for="comentario">Deja tu comentario:</label>
+              <textarea id="comentario" name="comentario" required></textarea>
+            </div>
+  
+            <button type="submit">Enviar</button>
+            <button type="button" onclick="descargarJSON()">Descargar</button>
+            <button type="button" id="btnEditar" onclick="editarDatos()">Editar</button>
+          </form>
+        </div>
+      </section>
+
+  <section id="Quienes-Somos" class="hidden">   
+    <h1>Quienes Somos</h1> 
+    <p> Somos un equipo dedicado de profesionales apasionados por los viajes y comprometidos con brindarte una experiencia inigualable. En nuestra agencia de viajes, nos enorgullece contar con un grupo diverso de expertos en la industria, todos con una amplia experiencia y conocimiento en destinos, servicios turísticos y tendencias actuales.
+
+      Nuestro equipo está formado por agentes de viajes altamente capacitados que se esfuerzan por comprender tus necesidades y deseos individuales. Estamos aquí para escucharte, asesorarte y ayudarte a crear el viaje perfecto que se ajuste a tus preferencias. Ya sea que estés planeando unas vacaciones familiares, una escapada romántica, un viaje de negocios o una aventura llena de adrenalina, estamos aquí para hacerlo realidad.
+      
+      Nos destacamos por nuestra atención al detalle y nuestra dedicación para proporcionarte un servicio de calidad. Nos aseguramos de mantenernos actualizados sobre las últimas tendencias y novedades en la industria de viajes, así como de establecer relaciones sólidas con proveedores de confianza en todo el mundo. Esto nos permite ofrecerte una amplia selección de opciones y garantizar que obtengas las mejores tarifas y servicios disponibles.
+      
+      Además, valoramos la transparencia y la honestidad en todas nuestras interacciones contigo. Nos esforzamos por brindarte información precisa y completa sobre los destinos, los requisitos de viaje, las opciones de alojamiento y cualquier otra consulta que puedas tener. Nuestro objetivo es que te sientas seguro y confiado al tomar decisiones informadas sobre tu viaje.</p> 
+      <div class="image-container">
+        <img src="https://media.cnnchile.com/sites/4/2020/06/Lago-Villarrica.jpg" alt="Paisaje 1">
+      </div>
+      
+      <div class="image-container">
+        <img src="https://storage.googleapis.com/chile-travel-newsite-static-content/2021/07/chiloe_prin-min.jpg" alt="Paisaje 2">
+      </div>
+      <div class="image-container">
+        <img src="https://vulcanopro.s3.amazonaws.com/images/lar_Te5Q2Xlu9LWQKSpelNylRS75Dr3mwfijGQjmxQZe.jpeg" alt="Paisaje 3">
+      </div>
+      
+      
+       
+      <button onclick="document.querySelector('header').style.backgroundColor = 'black'">Cambiar color de fondo encabezado</button>
+      </div>
+      
+      <div id="content">
+        <button id="cambiar-color_1">viaja</button>
+      </div>
+  </section>  
+  
+  <section id="Registros" class="hidden">  
+      <div class="content">
+        <h2>Registros</h2>
+        <table id="tablaRegistros">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Apellido</th>
+              <th>RUT</th>
+              <th>Teléfono</th>
+              <th>Email</th>
+              <th>Comentario</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr data-id="0">
+                <td><input type="checkbox" class="checkbox-registro"></td>
+                <!-- Contenido de las otras celdas -->
+                <!-- Contenido de las otras celdas -->
+              </tr>
+              <!-- Resto de las filas -->
+              <!-- Filas de la tabla se generan dinámicamente -->
+            </tbody>
+        </table>  
+      </div>
+    <br>
+    <button type="button" id="btnConsultar" onclick="consultarDatos()">Consultar</button>
+    <button type="button" id="btnEliminar" onclick="eliminarDatos()">Eliminar</button>
+  </section>
+</main>    
+
+<!--La URL incluida es la parte que se ha de modificar -->
+ 
+<div class="cookiesms" id="cookie1">
+  Este sitio web usa cookies, puedes ver <a href=http://www.joserodriguez.info/bloc/politica-de-cookies/>la política de cookies, aquí</a> -  
+  <button onclick="controlcookies()">Aceptar</button>
+  <div  class="cookies2">Política de cookies + </div>
+  </div>
+  <script type="text/javascript">
+  if (!localStorage.controlcookie>0){ 
+  cookie1.setAttribute("style","animation: desaparecer 5s;-webkit-animation: desaparecer 5s;");
+  }
+  </script>
+   
+  <!-- Fin del código de cookies --->
+
+<footer>    
+<p>Derechos de autor &copy; 2023</p>
+</footer>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Mostrar la sección de inicio y ocultar las demás secciones
+      document.getElementById('Home').classList.remove('hidden');
+      document.getElementById('Contactenos').classList.add('hidden');
+      document.getElementById('Quienes-Somos').classList.add('hidden');
+      document.getElementById('Registros').classList.add('hidden');
+      
+      // Agregar eventos de clic a los enlaces de navegación
+      var enlaces = document.querySelectorAll('nav a');
+      for (var i = 0; i < enlaces.length; i++) {
+        enlaces[i].addEventListener('click', function(event) {
+          var seccionId = event.target.getAttribute('href').substring(1);
+          mostrarSeccion(seccionId);
+        });
+      }
+    });
+    // Obtén una referencia al botón y a la sección "Quienes Somos"
+    const botonCambiarColor1 = document.getElementById("cambiar-color_1");
+    const quienesSomos = document.getElementById("Quienes-Somos");
+
+    botonCambiarColor1.addEventListener("click", function() {
+    quienesSomos.style.backgroundColor = "yellow";
+  });
+    
+
+
+    function mostrarSeccion(seccion) {
+      // Mostrar la sección seleccionada y ocultar las demás secciones
+      var secciones = document.getElementsByTagName('section');
+      for (var i = 0; i < secciones.length; i++) {
+        if (secciones[i].id === seccion) {
+          secciones[i].classList.remove('hidden');
+        } else {
+          secciones[i].classList.add('hidden');
+        }
+      }
+    }
+    var datosFormulario = {}; //arreglo para guardar datos del formulario
+
+    function guardarDatos(event) {
+      event.preventDefault(); // Evita que el formulario se envíe por defecto
+
+      // Obtener los valores ingresados en el formulario
+      var nombre = document.getElementById('nombre').value;
+      var apellido = document.getElementById('apellido').value;
+      var rut = document.getElementById('rut').value;
+      var telefono = document.getElementById('telefono').value;
+      var email = document.getElementById('email').value;
+      var comentario = document.getElementById('comentario').value;
+
+      // Guardar los datos en el objeto
+      datosFormulario = {
+        nombre: nombre,
+        apellido: apellido,
+        rut: rut,
+        telefono: telefono,
+        email: email,
+        comentario: comentario
+      };
+      
+      // Agregar los datos a la tabla
+      var tabla = document.getElementById('tablaRegistros');
+      var fila = tabla.insertRow();
+
+    // Insertar celdas en la fila
+    var celdaCheckbox = fila.insertCell();
+      var celdaNombre = fila.insertCell();
+      var celdaApellido = fila.insertCell();
+      var celdaRut = fila.insertCell();
+      var celdaTelefono = fila.insertCell();
+      var celdaEmail = fila.insertCell();
+      var celdaComentario = fila.insertCell();
+
+      // Crear el checkbox y agregarlo a la celda
+      var checkbox = document.createElement('input');
+      checkbox.type = 'checkbox';
+      checkbox.className = 'checkbox-registro';
+      checkbox.id = 'checkbox-' + datosFormulario.rut; // Asignar un ID único al checkbox
+      celdaCheckbox.appendChild(checkbox);
+      
+      // Asignar valores a las celdas
+      celdaNombre.innerHTML = nombre;
+      celdaApellido.innerHTML = apellido;
+      celdaRut.innerHTML = rut;
+      celdaTelefono.innerHTML = telefono;
+      celdaEmail.innerHTML = email;
+      celdaComentario.innerHTML = comentario;
+
+      // Resetear el formulario
+      document.getElementById('nombre').value = '';
+      document.getElementById('apellido').value = '';
+      document.getElementById('rut').value = '';
+      document.getElementById('telefono').value = '';
+      document.getElementById('email').value = '';
+      document.getElementById('comentario').value = '';
+
+      // Agregar un comentario al enviar el formulario
+      alert('Formulario enviado correctamente');
+
+      // Habilitar botones de edición, consulta y eliminación
+      document.getElementById('btnGuardar').disabled = true;
+      document.getElementById('btnEditar').disabled = false;
+      document.getElementById('btnConsultar').disabled = false;
+      document.getElementById('btnEliminar').disabled = false;
+    }
+    
+    function descargarJSON() {
+    var datosJSON = JSON.stringify(datosFormulario);
+    var enlaceDescarga = document.createElement('a');
+    enlaceDescarga.setAttribute('href', 'data:application/json;charset=utf-8,' + encodeURIComponent(datosJSON));
+    enlaceDescarga.setAttribute('download', 'formulario.json');
+    enlaceDescarga.style.display = 'none';
+    document.body.appendChild(enlaceDescarga);
+    enlaceDescarga.click();
+    document.body.removeChild(enlaceDescarga);
+  }
+
+    function editarDatos() {
+      // Llenar el formulario con los datos guardados
+      document.getElementById('nombre').value = datosFormulario.nombre;
+      document.getElementById('apellido').value = datosFormulario.apellido;
+      document.getElementById('rut').value = datosFormulario.rut;
+      document.getElementById('telefono').value = datosFormulario.telefono;
+      document.getElementById('email').value = datosFormulario.email;
+      document.getElementById('comentario').value = datosFormulario.comentario;
+
+      // Deshabilitar el botón de edición
+      document.getElementById('btnEditar').disabled = true;
+    }
+      function consultarDatos() {
+    // Verificar si se han guardado los datos
+    if (Object.keys(datosFormulario).length === 0) {
+      alert('No hay datos para consultar.');
+      return;
+    }
+
+    // Mostrar los datos guardados en una ventana emergente
+    var datos = `Nombre: ${datosFormulario.nombre || ''}\n`
+              + `Apellido: ${datosFormulario.apellido || ''}\n`
+              + `RUT: ${datosFormulario.rut || ''}\n`
+              + `Teléfono: ${datosFormulario.telefono || ''}\n`
+              + `Email: ${datosFormulario.email || ''}\n`
+              + `Comentario: ${datosFormulario.comentario || ''}`;
+
+    alert(datos);
+  }
+
+  function eliminarDatos() {
+  var checkboxes = document.getElementsByClassName('checkbox-registro');
+  var indices = obtenerIndicesRegistrosSeleccionados(checkboxes);
+
+  if (indices.length === 0) {
+    alert('No se ha seleccionado ningún registro para eliminar.');
+    return;
+  }
+
+  for (var i = indices.length - 1; i >= 0; i--) {
+    var indice = indices[i];
+    eliminarFila(indice);
+  }
+}
+function eliminarFila(indice) {
+  var tabla = document.getElementById('tablaRegistros');
+  var filas = tabla.getElementsByTagName('tr');
+
+  // Validar el índice
+  if (indice < 0 || indice >= filas.length) {
+    console.error('El índice está fuera de rango.');
+    return;
+  }
+
+  // Obtener el índice real de la fila dentro del tbody
+  var indiceReal = indice - 1; // Restar 1 para excluir la fila de encabezado
+  
+  // Eliminar la fila
+  tabla.getElementsByTagName('tbody')[0].deleteRow(indiceReal);
+}
+
+function obtenerIndicesRegistrosSeleccionados(checkboxes) {
+  var indices = [];
+
+  for (var i = 0; i < checkboxes.length; i++) {
+    var checkbox = checkboxes[i];
+
+    if (checkbox.checked) {
+      // Obtener el índice del registro desde el atributo data-id de la fila padre
+      var fila = checkbox.closest('tr');
+      var indice = parseInt(fila.getAttribute('data-id'));
+      indices.push(indice);
+    }
+  }
+  return indices;
+}
+
+</script>
+</body>
+</html>
